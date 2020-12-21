@@ -1,0 +1,168 @@
+$primary: #9356DC;
+$secondary: #FF79DA; 
+$tertiary: #99E2D0;
+
+
+
+*
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+#container
+{
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+
+}
+
+body
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header
+{
+    img 
+    {
+        width: 30%;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 35%;
+        padding-right: 35%;
+    }
+
+    .localisation
+    {
+        box-shadow: inset 0px 3px 3px 0px rgba(140, 140, 140, 0.385);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 62px;
+        background-color: rgba(102, 102, 102, 0.138);
+
+        i 
+        {
+            font-size: 18px;
+            margin-top: 17px;
+        }
+
+        input 
+        {
+            outline: none;
+            border: none;
+            font-size: 17px;
+            text-align: center;
+            background-color: transparent;
+            
+        }
+    }
+
+    #presentation
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        background-color: rgba(216, 216, 216, 0.138);
+
+        *
+        {
+            text-align: center;
+        }
+
+        h2 
+        {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        button 
+        {
+            white-space: nowrap;
+            align-self: center;
+            width: 52%;
+            background: linear-gradient($secondary, $primary);
+            border: none;
+            border-radius: 30px;
+            padding: 18px;
+            font-size: 16px;
+            color: white;
+            margin-top: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0px 6px 5px 0px rgba(140, 140, 140, 0.385);
+        }
+    }
+}
+
+.fonctionnement
+{
+    height: 24em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    h2 
+    {
+        align-self: flex-start;
+    }
+
+    button
+    {
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        height: 80px;
+        width: 90%;
+        border: none;
+        border-radius: 30px;
+
+        p 
+        {
+            background-color: $primary;
+            color: white;
+            border-radius: 50%;
+            padding: 6px 10px 6px 10px;
+            display: flex;
+            margin-left: -18px;
+        }
+
+        i 
+        {
+            color: grey;
+            margin-left: 30px;
+            font-size: 20px;
+        }
+
+        h3 
+        {
+            margin-left: 30px;
+            font-size: 18px;
+            align-self: center;
+        }
+    }
+}
+
+.restaurants
+{
+    img
+    {
+        width: 100px;
+    }
+}
+
+
+
+
