@@ -1,0 +1,247 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+#container {
+  max-width: 575.98px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-flow: row;
+  width: 70%;
+  justify-content: space-between;
+}
+
+header a {
+  margin-left: 5%;
+}
+
+header a button {
+  border: none;
+  font-size: 25px;
+  background-color: white;
+}
+
+header a button i {
+  text-align: center;
+  margin-top: 32px;
+}
+
+header h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 35px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#main {
+  background-color: #99e2d056;
+  border-radius: 40px 40px 0px 0px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 90em;
+}
+
+#main nav .titre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#main nav .titre h2 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 35px;
+}
+
+#main nav .titre .icone {
+  margin-top: 37px;
+}
+
+#main nav .titre .icone #plein {
+  display: none;
+  font-size: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#main nav .titre .icone #vide {
+  font-size: 30px;
+}
+
+#main nav .titre .icone:hover {
+  cursor: pointer;
+}
+
+#main nav .titre .icone:hover #plein {
+  display: block;
+}
+
+#main nav .titre .icone:hover #vide {
+  display: none;
+}
+
+#main .ordre {
+  width: 100%;
+  height: 20em;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+#main .ordre h3 {
+  font-size: 17px;
+  font-weight: 400;
+  border-bottom: #99E2D0 3px solid;
+  width: 9%;
+  margin-left: 5%;
+}
+
+#main .ordre article {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background-color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 20px;
+  height: 70px;
+  box-shadow: 0px 6px 5px 0px rgba(140, 140, 140, 0.385);
+  cursor: pointer;
+}
+
+#main .ordre article h4 {
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 15px;
+  margin-top: 12px;
+  margin-bottom: -15px;
+}
+
+#main .ordre article .txt_2 {
+  display: flex;
+  flex-flow: row;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: -3px;
+}
+
+#main .ordre article .txt_2 p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#main .ordre article .txt_2 em {
+  font-weight: 600;
+  font-style: normal;
+}
+
+#main .ordre article .txt_2 .check {
+  display: none;
+  align-self: flex-start;
+  background-color: #99E2D0;
+  margin-top: -22px;
+  margin-right: -15px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+#main .ordre article .txt_2 .check i {
+  font-size: 25px;
+  color: white;
+  padding: 22.5px;
+}
+
+#main .ordre article:hover .check {
+  display: block;
+  transition-property: all;
+}
+
+#main #btn {
+  display: flex;
+  justify-content: center;
+}
+
+#main #btn button {
+  width: 52%;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 30px;
+  padding: 18px;
+  font-size: 16px;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0px 6px 5px 0px rgba(140, 140, 140, 0.385);
+  cursor: pointer;
+}
+
+footer {
+  background-color: #222222;
+  padding-bottom: 30px;
+}
+
+footer h2 {
+  font-family: 'Shrikhand', cursive;
+  font-weight: 200;
+  margin-left: 5%;
+  color: white;
+  font-size: 20px;
+}
+
+footer #resto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 190px;
+  margin-left: 5%;
+  color: white;
+  height: 30px;
+}
+
+footer #resto i {
+  font-size: 14px;
+  margin-top: 17px;
+}
+
+footer #partner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 160px;
+  margin-left: 5%;
+  color: white;
+  height: 30px;
+}
+
+footer #partner i {
+  font-size: 13px;
+  margin-top: 17px;
+}
+
+footer p {
+  margin-left: 5%;
+  color: white;
+}
+
+footer a {
+  margin-left: 5%;
+  color: white;
+  text-decoration: none;
+}

@@ -103,6 +103,17 @@ header #presentation button {
   border: none;
   border-radius: 30px;
   box-shadow: 0px 6px 5px 0px rgba(140, 140, 140, 0.385);
+  transition-duration: 0.4s;
+}
+
+.fonctionnement .btn:hover {
+  background-color: #ff79d969;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.fonctionnement .btn:hover:hover i {
+  color: #9356DC;
 }
 
 .fonctionnement .btn h3 {
@@ -184,6 +195,18 @@ header #presentation button {
   margin-right: 20px;
 }
 
+.restaurants a article .txt .icone .plein {
+  display: none;
+}
+
+.restaurants a article .txt .icone:hover .plein {
+  display: block;
+}
+
+.restaurants a article .txt .icone:hover .vide {
+  display: none;
+}
+
 .restaurants a article h5 {
   background-color: #99E2D0;
   width: 90px;
@@ -206,6 +229,7 @@ header #presentation button {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition-duration: 0.9s;
 }
 
 footer {
