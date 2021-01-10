@@ -69,8 +69,6 @@ header #presentation h2 {
 }
 
 header #presentation button {
-  white-space: nowrap;
-  align-self: center;
   width: 52%;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
@@ -79,8 +77,17 @@ header #presentation button {
   font-size: 16px;
   color: white;
   margin-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   box-shadow: 0px 6px 5px 0px rgba(140, 140, 140, 0.385);
+  cursor: pointer;
+  transform: scale(1);
+  transition-property: all;
+  transition-duration: 0.4s;
+  align-self: center;
+}
+
+header #presentation button:hover {
+  transform: scale(1.1);
 }
 
 .fonctionnement {
@@ -229,12 +236,12 @@ header #presentation button {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition-duration: 0.9s;
 }
 
 footer {
+  position: relative;
   background-color: #222222;
-  padding-bottom: 30px;
+  height: 15em;
 }
 
 footer h2 {
@@ -260,6 +267,18 @@ footer #resto i {
   margin-top: 17px;
 }
 
+footer #resto:hover {
+  cursor: pointer;
+}
+
+footer #resto:hover i {
+  color: #9356DC;
+}
+
+footer #resto:hover p {
+  color: #9356DC;
+}
+
 footer #partner {
   display: flex;
   flex-direction: row;
@@ -275,13 +294,34 @@ footer #partner i {
   margin-top: 17px;
 }
 
+footer #partner:hover {
+  cursor: pointer;
+}
+
+footer #partner:hover i {
+  color: #9356DC;
+}
+
+footer #partner:hover p {
+  color: #9356DC;
+}
+
 footer p {
   margin-left: 5%;
   color: white;
+}
+
+footer p:hover {
+  cursor: pointer;
+  color: #9356DC;
 }
 
 footer a {
   margin-left: 5%;
   color: white;
   text-decoration: none;
+}
+
+footer a:hover {
+  color: #9356DC;
 }
