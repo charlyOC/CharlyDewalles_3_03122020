@@ -3,11 +3,137 @@
 }
 
 #container {
-  max-width: 575.98px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto;
+  animation: blur 2s linear;
+  -webkit-animation: blur 2s linear;
+}
+
+.loader {
+  height: 150px;
+  width: 150px;
+  position: fixed;
+  top: 35%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  animation: blur_2 2s 0.8s forwards, spin 2s infinite, none 1s 3s forwards;
+  -webkit-animation: blur_2 2s 0.8s forwards, spin 2s infinite, none 1s 3s forwards;
+}
+
+.loader .p1 {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  margin: 0;
+  padding: 0;
+  opacity: 0.7;
+  width: 50px;
+  height: 50px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.loader .p2 {
+  position: relative;
+  top: 60px;
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  background-color: #FF79DA;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: blur 1.5 linear;
+  -webkit-animation: blur 1.5 linear;
+}
+
+.loader .p3 {
+  position: relative;
+  top: 30px;
+  right: 30px;
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  background-color: #99E2D0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes blur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blur_2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes none {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes grossissement {
+  0% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
 }
 
 body {
@@ -18,15 +144,18 @@ body {
   justify-content: center;
 }
 
-header img {
-  width: 30%;
-  height: 35px;
+header #logo_loc {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+
+header #logo_loc img {
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 35%;
-  padding-right: 35%;
+  margin-bottom: 10px;
 }
 
 header .localisation {
@@ -88,10 +217,11 @@ header #presentation button {
 
 header #presentation button:hover {
   transform: scale(1.1);
+  box-shadow: 5px 10px 9px 0px rgba(140, 140, 140, 0.755);
+  opacity: 0.8;
 }
 
 .fonctionnement {
-  height: 24em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -99,7 +229,15 @@ header #presentation button:hover {
   padding-right: 5%;
 }
 
-.fonctionnement .btn {
+.fonctionnement .etape {
+  height: 280px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.fonctionnement .etape .btn {
+  background-color: rgba(128, 128, 128, 0.076);
   height: 70px;
   display: flex;
   flex-direction: row;
@@ -113,17 +251,17 @@ header #presentation button:hover {
   transition-duration: 0.4s;
 }
 
-.fonctionnement .btn:hover {
+.fonctionnement .etape .btn:hover {
   background-color: #ff79d969;
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
-.fonctionnement .btn:hover:hover i {
+.fonctionnement .etape .btn:hover:hover i {
   color: #9356DC;
 }
 
-.fonctionnement .btn h3 {
+.fonctionnement .etape .btn .num p {
   background-color: #9356DC;
   font-weight: 400;
   color: white;
@@ -133,14 +271,15 @@ header #presentation button:hover {
   margin-left: -18px;
 }
 
-.fonctionnement .btn i {
+.fonctionnement .etape .btn i {
   color: grey;
   margin-left: 30px;
   font-size: 20px;
 }
 
-.fonctionnement .btn h4 {
+.fonctionnement .etape .btn p {
   font-size: 18px;
+  font-weight: 700;
   text-align: center;
   margin: auto;
 }
@@ -202,15 +341,25 @@ header #presentation button:hover {
   margin-right: 20px;
 }
 
-.restaurants a article .txt .icone .plein {
-  display: none;
-}
-
 .restaurants a article .txt .icone:hover .plein {
   display: block;
+  animation: grossissement 0.2s linear forwards;
+  -webkit-animation: grossissement 0.2s linear forwards;
 }
 
 .restaurants a article .txt .icone:hover .vide {
+  display: none;
+}
+
+.restaurants a article .txt .icone i {
+  font-size: 25px;
+}
+
+.restaurants a article .txt .icone .plein {
+  font-size: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: none;
 }
 
@@ -222,20 +371,9 @@ header #presentation button:hover {
   padding: 6px;
   font-size: 17px;
   position: sticky;
-  left: 70%;
+  left: 80%;
   right: 20%;
   bottom: 100%;
-}
-
-.restaurants a article i {
-  font-size: 25px;
-}
-
-.restaurants a article .plein {
-  font-size: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 footer {
@@ -324,4 +462,42 @@ footer a {
 
 footer a:hover {
   color: #9356DC;
+}
+
+@media screen and (min-width: 992px) {
+  .fonctionnement {
+    display: flex;
+    flex-flow: column;
+    height: 10em;
+  }
+  .fonctionnement .etape {
+    display: flex;
+    flex-direction: row;
+  }
+  .fonctionnement .etape .btn {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #container {
+    max-width: 1200px;
+  }
+  .restaurants {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    height: 60em;
+  }
+  .restaurants h2 {
+    padding-right: 40em;
+  }
+  .restaurants a {
+    width: 45%;
+  }
+  .restaurants #note h5 {
+    position: sticky;
+    left: 90%;
+    bottom: 100%;
+  }
 }
