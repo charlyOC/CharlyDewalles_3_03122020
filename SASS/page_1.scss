@@ -57,6 +57,11 @@ img
 
 }
 
+@keyframes grossissement 
+{
+    0% { transform:scale(0) ; -webkit-transform:scale(0) ; -moz-transform:scale(0) ; -ms-transform:scale(0) ; -o-transform:scale(0) ; }
+    100% { transform:scale(1) ; -webkit-transform:scale(1) ; -moz-transform:scale(1) ; -ms-transform:scale(1) ; -o-transform:scale(1) ; }
+}
 
 
 #main
@@ -113,7 +118,8 @@ img
                 #plein
                 {
                     display: block;
-                    font-size: 30px;
+                    animation: grossissement 0.2s linear forwards;
+                    -webkit-animation: grossissement 0.2s linear forwards;
                 }
 
                 #vide
@@ -161,7 +167,7 @@ img
         {
             animation: opacité 1s 1s linear forwards, glissement 1s 0.8s linear forwards;
             -webkit-animation: opacité 1s 1s linear forwards, glissement 1s 0.8s linear forwards;
-}
+        }
 
 
         h3 
@@ -187,6 +193,7 @@ img
             box-shadow: 0px 6px 5px 0px rgba(140, 140, 140, 0.385);
             cursor: pointer;
             opacity: 0;
+            max-width: 400px;
            
 
         
@@ -199,6 +206,7 @@ img
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                
 
                 .titre_2
                 {
