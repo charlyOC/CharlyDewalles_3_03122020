@@ -89,7 +89,7 @@ img {
 #main .titre .icone #plein {
   display: none;
   font-size: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#ff79da));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -155,7 +155,7 @@ img {
 #main .ordre h3 {
   font-size: 17px;
   font-weight: 400;
-  border-bottom: #99E2D0 3px solid;
+  border-bottom: #99e2d0 3px solid;
   width: 30px;
   margin-left: 5%;
 }
@@ -173,7 +173,6 @@ img {
   box-shadow: 0px 6px 5px 0px rgba(140, 140, 140, 0.385);
   cursor: pointer;
   opacity: 0;
-  max-width: 400px;
 }
 
 #main .ordre article .txt {
@@ -227,7 +226,7 @@ img {
 #main .ordre article .check {
   width: 0px;
   align-self: flex-start;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   border-radius: 20px;
   transition-duration: 0.5s;
   overflow: hidden;
@@ -261,7 +260,7 @@ img {
 
 #main #btn button {
   width: 52%;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356DC);
   border: none;
   border-radius: 30px;
   padding: 18px;
@@ -376,5 +375,8 @@ footer a:hover {
   .menu {
     display: flex;
     flex-direction: row;
+  }
+  .ordre article {
+    max-width: 350px;
   }
 }
